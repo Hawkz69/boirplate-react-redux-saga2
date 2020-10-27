@@ -5,6 +5,7 @@ export default reducers => {
     const persistedReducer = persistReducer({
         key: 'root',
         storage,
+        blacklist: ['router'],
     }, reducers);
 
     return persistedReducer;
